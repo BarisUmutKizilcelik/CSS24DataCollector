@@ -1,0 +1,159 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+}
+
+.form-wrap {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+label.control-label {
+  margin-right: 10px;
+  width: 100px;
+  text-align: left;
+}
+
+select,
+input[type="text"] {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  width: calc(100% - 110px); /* Adjust width to ensure space for label */
+}
+
+#check {
+  display: none;
+}
+
+.button {
+  width: 100%;
+  max-width: 250px;
+  height: 100px;
+  background-color: blueviolet;
+  display: inline-block;
+  border-radius: 50px;
+  position: relative;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.button:before {
+  content: "";
+  width: 80px;
+  height: 80px;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  transition: 0.2s;
+}
+
+#check:checked + .button {
+  background-color: red;
+}
+
+#check:checked + .button:before {
+  left: calc(100% - 90px);
+}
+
+.status-not-recording {
+  color: blueviolet;
+}
+
+.status-recording {
+  color: red;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .form-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .form-group {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  label.control-label {
+    margin-right: 10px;
+    width: 100px;
+  }
+
+  select,
+  input[type="text"] {
+    width: calc(100% - 100px); /* Adjust width to ensure space for label */
+  }
+
+  .button {
+    width: 100%;
+    max-width: 250px;
+    height: 100px;
+  }
+
+  .button:before {
+    width: 80px;
+    height: 80px;
+    top: 10px;
+    left: 10px;
+  }
+
+  #check:checked + .button:before {
+    left: calc(100% - 90px);
+  }
+}
+
+/* Desktop design */
+@media (min-width: 601px) {
+  .form-wrap {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .form-group {
+    width: auto;
+  }
+
+  label.control-label {
+    margin-right: 10px;
+  }
+
+  select,
+  input[type="text"] {
+    width: 280px;
+  }
+}
