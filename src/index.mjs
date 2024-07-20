@@ -47,9 +47,9 @@ const enableMotionEvents = async () => {
           participantId: document.getElementById("context").value,
           activity: document.getElementById("label").value,
         },
-        defaultTags
+        defaultTags,
       ),
-      "activity_" + document.getElementById("label").value
+      "activity_" + document.getElementById("label").value,
     );
     window.addEventListener("devicemotion", handleMotionEvent);
     motionEventListenerAdded = true;
@@ -74,39 +74,39 @@ async function handleMotionEvent(event) {
 
   c1.addDataPoint(
     "accX", // Name of the sensor
-    acceleration.x // Value
+    acceleration.x, // Value
   );
   c1.addDataPoint(
     "accY", // Name of the sensor
-    acceleration.y // Value
+    acceleration.y, // Value
   );
   c1.addDataPoint(
     "accZ", // Name of the sensor
-    acceleration.z // Value
+    acceleration.z, // Value
   );
   c1.addDataPoint(
     "accelerationIncludingGravityX", // Name of the sensor
-    accelerationIncludingGravity.x // Value
+    accelerationIncludingGravity.x, // Value
   );
   c1.addDataPoint(
     "accelerationIncludingGravityY", // Name of the sensor
-    accelerationIncludingGravity.y // Value
+    accelerationIncludingGravity.y, // Value
   );
   c1.addDataPoint(
     "accelerationIncludingGravityZ", // Name of the sensor
-    accelerationIncludingGravity.z // Value
+    accelerationIncludingGravity.z, // Value
   );
   c1.addDataPoint(
     "rotationRateAlpha", // Name of the sensor
-    rotationRate.alpha // Value
+    rotationRate.alpha, // Value
   );
   c1.addDataPoint(
     "rotationRateBeta", // Name of the sensor
-    rotationRate.beta // Value
+    rotationRate.beta, // Value
   );
   c1.addDataPoint(
     "rotationRateGamma", // Name of the sensor
-    rotationRate.gamma // Value
+    rotationRate.gamma, // Value
   );
   console.log("gggg");
 }
