@@ -1,159 +1,161 @@
 body {
-  background-color: black;
-  color: white;
-  font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
+  background-color: black; /* Sets the background color of the page to black */
+  color: white; /* Sets the text color to white */
+  font-family: Arial, sans-serif; /* Sets the font family for the text */
+  display: flex; /* Uses flexbox layout for the body */
+  justify-content: center; /* Centers the content horizontally */
+  align-items: center; /* Centers the content vertically */
+  height: 100vh; /* Sets the height of the body to 100% of the viewport height */
+  margin: 0; /* Removes the default margin */
 }
 
 .container {
-  text-align: center;
-  width: 100%;
-  max-width: 400px;
-  margin: auto;
+  text-align: center; /* Centers the text inside the container */
+  width: 100%; /* Sets the width to 100% */
+  max-width: 400px; /* Sets the maximum width to 400px */
+  margin: auto; /* Centers the container */
 }
 
 .form-wrap {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
+  display: flex; /* Uses flexbox layout */
+  justify-content: center; /* Centers the form elements horizontally */
+  flex-wrap: wrap; /* Allows the elements to wrap to the next line */
+  margin-bottom: 20px; /* Adds a bottom margin */
 }
 
 .form-group {
-  margin: 10px 0;
-  display: flex;
-  align-items: center;
-  width: 100%;
+  margin: 10px 0; /* Adds top and bottom margins */
+  display: flex; /* Uses flexbox layout */
+  align-items: center; /* Aligns items vertically in the center */
+  width: 100%; /* Sets the width to 100% */
 }
 
 label.control-label {
-  margin-right: 10px;
-  width: 100px;
-  text-align: left;
+  margin-right: 10px; /* Adds a right margin */
+  width: 100px; /* Sets a fixed width */
+  text-align: left; /* Aligns the text to the left */
 }
 
 select,
 input[type="text"] {
-  background-color: white;
-  color: black;
-  border: none;
-  padding: 10px;
-  font-size: 16px;
-  border-radius: 5px;
-  width: calc(100% - 110px); /* Adjust width to ensure space for label */
+  background-color: white; /* Sets the background color to white */
+  color: black; /* Sets the text color to black */
+  border: none; /* Removes the border */
+  padding: 10px; /* Adds padding */
+  font-size: 16px; /* Sets the font size */
+  border-radius: 5px; /* Rounds the corners */
+  width: calc(
+    100% - 110px
+  ); /* Adjusts the width to ensure space for the label */
 }
 
 #check {
-  display: none;
+  display: none; /* Hides the checkbox */
 }
 
 .button {
-  width: 100%;
-  max-width: 250px;
-  height: 100px;
-  background-color: blueviolet;
-  display: inline-block;
-  border-radius: 50px;
-  position: relative;
-  cursor: pointer;
-  margin-top: 20px;
+  width: 100%; /* Sets the width to 100% */
+  max-width: 250px; /* Sets the maximum width to 250px */
+  height: 100px; /* Sets the height to 100px */
+  background-color: blueviolet; /* Sets the background color */
+  display: inline-block; /* Makes it an inline-block element */
+  border-radius: 50px; /* Rounds the corners to form an oval */
+  position: relative; /* Positions the button relative to its container */
+  cursor: pointer; /* Changes the cursor to a pointer */
+  margin-top: 20px; /* Adds a top margin */
 }
 
 .button:before {
-  content: "";
-  width: 80px;
-  height: 80px;
-  background-color: black;
-  border-radius: 50%;
-  position: absolute;
-  left: 10px;
-  top: 10px;
-  transition: 0.2s;
+  content: ""; /* Adds empty content */
+  width: 80px; /* Sets the width */
+  height: 80px; /* Sets the height */
+  background-color: black; /* Sets the background color */
+  border-radius: 50%; /* Rounds the corners to form a circle */
+  position: absolute; /* Positions the element absolutely within the button */
+  left: 10px; /* Positions it 10px from the left */
+  top: 10px; /* Positions it 10px from the top */
+  transition: 0.2s; /* Adds a transition effect */
 }
 
 #check:checked + .button {
-  background-color: red;
+  background-color: red; /* Changes the background color when checked */
 }
 
 #check:checked + .button:before {
-  left: calc(100% - 90px);
+  left: calc(100% - 90px); /* Moves the circle to the right when checked */
 }
 
 .status-not-recording {
-  color: blueviolet;
+  color: blueviolet; /* Sets the color for the "not recording" status */
 }
 
 .status-recording {
-  color: red;
+  color: red; /* Sets the color for the "recording" status */
 }
 
 /* Responsive design */
 @media (max-width: 600px) {
   .container {
-    padding: 0 20px;
+    padding: 0 20px; /* Adds padding on smaller screens */
   }
 
   .form-wrap {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: column; /* Stacks the form elements vertically */
+    align-items: flex-start; /* Aligns the form elements to the start */
   }
 
   .form-group {
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
+    width: 100%; /* Sets the width to 100% */
+    justify-content: space-between; /* Adds space between form elements */
+    align-items: center; /* Aligns items vertically in the center */
   }
 
   label.control-label {
-    margin-right: 10px;
-    width: 100px;
+    margin-right: 10px; /* Adds a right margin */
+    width: 100px; /* Sets a fixed width */
   }
 
   select,
   input[type="text"] {
-    width: calc(100% - 100px); /* Adjust width to ensure space for label */
+    width: calc(100% - 100px); /* Adjusts the width for label space */
   }
 
   .button {
-    width: 100%;
-    max-width: 250px;
-    height: 100px;
+    width: 100%; /* Sets the width to 100% */
+    max-width: 250px; /* Sets the maximum width */
+    height: 100px; /* Sets the height */
   }
 
   .button:before {
-    width: 80px;
-    height: 80px;
-    top: 10px;
-    left: 10px;
+    width: 80px; /* Sets the width */
+    height: 80px; /* Sets the height */
+    top: 10px; /* Positions it 10px from the top */
+    left: 10px; /* Positions it 10px from the left */
   }
 
   #check:checked + .button:before {
-    left: calc(100% - 90px);
+    left: calc(100% - 90px); /* Moves the circle to the right when checked */
   }
 }
 
 /* Desktop design */
 @media (min-width: 601px) {
   .form-wrap {
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+    flex-direction: column; /* Stacks the form elements vertically */
+    justify-content: center; /* Centers the form elements */
+    align-items: flex-start; /* Aligns the form elements to the start */
   }
 
   .form-group {
-    width: auto;
+    width: auto; /* Sets the width to auto */
   }
 
   label.control-label {
-    margin-right: 10px;
+    margin-right: 10px; /* Adds a right margin */
   }
 
   select,
   input[type="text"] {
-    width: 280px;
+    width: 280px; /* Sets the width to 280px */
   }
 }
